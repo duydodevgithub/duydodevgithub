@@ -3,7 +3,7 @@ Pseudo Code
 
 event: page load
     generate random numer between 10 - 30
-    assign random number from 1-4 to 4 pictures
+    assign random number from 2-5 to 4 pictures
 
 event: onclick function to 4 pictures
     total score = ++score each click on pictures
@@ -18,7 +18,7 @@ event: onclick function to 4 pictures
 var wins = 0;
 var looses = 0;
 var totalScore = 0;
-var numArray = [1,2,3,4];
+var numArray = [2,3,4,5];
 numArray.sort(function(a, b){return 0.5 - Math.random()});
 var numCrys1 = numArray[0];
 var numCrys2 = numArray[1]; 
@@ -81,7 +81,9 @@ $("#btnReset").on("click", function() {
     wins = 0;
     looses = 0;
     totalScore = 0;
+    randNum = 10 + Math.floor(Math.random() * 21);
     $("#wins").html("Wins: " + wins);
     $("#looses").html("Looses: " + looses);
     $("#totalScore").html(totalScore);
+    $(".output1").html("Random Number:" + "<br><br>" + randNum);
 });
